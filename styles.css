@@ -1,0 +1,599 @@
+/* ============================================================
+   SHAPES LAB — STYLES
+   Order: Font → Reset → Base → Homepage → Pricing → Responsive
+   ============================================================ */
+
+
+ @font-face {
+  font-family: 'Open Runde';
+  src: url('fonts/OpenRunde-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Runde';
+  src: url('fonts/OpenRunde-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Open Runde';
+  src: url('fonts/OpenRunde-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-display: swap;
+} 
+
+
+/* ===== RESET =================================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ===== BASE ==================================================== */
+
+body {
+  font-family: 'Open Runde', system-ui, -apple-system, sans-serif;
+  font-weight: 500;
+  color: #000;
+  background: #fff;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* ===== BUTTONS (shared across pages) ========================== */
+
+.cta-buttons {
+  display: flex;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  text-decoration: none;
+  border: none;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: #000;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #7d7d7d -15.50%, #000000 60%);
+  box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.3);
+}
+
+.btn-secondary {
+  background: rgba(0, 0, 0, 0.04);
+  color: #000;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+
+/* ============================================================
+   HOMEPAGE
+   ============================================================ */
+
+/* Layout */
+.page-wrapper {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 370px;
+  flex-shrink: 0;
+}
+
+.sidebar-content {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 72px 32px 40px 32px;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: none;
+}
+
+.sidebar-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Logo */
+.logo-text {
+  font-size: 21.2px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.9px;
+  margin-bottom: 4px;
+}
+
+.logo-text-link {
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Hero */
+.hero {
+  margin-bottom: 32px;
+}
+
+.subtitle {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: #000;
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 13.5px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.62);
+  letter-spacing: -0.23px;
+  max-width: 360px;
+  margin-bottom: 16px;
+}
+
+/* Sections (Expertise / Clients) */
+.section {
+  margin-bottom: 28px;
+}
+
+.section-label {
+  font-size: 13.8px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.62);
+  letter-spacing: -0.23px;
+  margin-bottom: 6px;
+}
+
+.tag-list li {
+  font-size: 13.8px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  line-height: 1.85;
+  margin-bottom: 1.5px;
+}
+
+.tag-list .muted {
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: -0.2px;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.footer p {
+  font-size: 13.5px;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: -0.23px;
+  max-width: 290px;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.footer a {
+  color: #000;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Portfolio grid */
+.portfolio {
+  flex: 1;
+  padding: 10px 12px 20px 8px;
+}
+
+.portfolio-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.portfolio-card {
+  background: #f3f3f3;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.portfolio-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ============================================================
+   PRICING PAGE
+   ============================================================ */
+
+/* Layout */
+.pricing-page {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 56px 24px 48px;
+}
+
+/* Price hero */
+.pricing-hero {
+  margin-bottom: 28px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -2.1px;
+  line-height: 1.1;
+  margin-top: 64px;
+}
+
+.price-period {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.9px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.slots {
+  font-size: 14.7px;
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Features */
+.pricing-features {
+  margin-bottom: 20px;
+}
+
+/* Feature list — flex row with SVG icon slot (::before replaced by .check-icon) */
+.feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 2;
+  letter-spacing: -0.2px;
+  color: rgba(0, 0, 0, 0.7);
+  padding-bottom: 4px;
+}
+
+.feature-list li::before {
+  display: none;
+}
+
+.check-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+/* CTAs */
+.pricing-ctas {
+  margin-bottom: 48px;
+}
+
+/* Testimonials */
+.testimonials {
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+.testimonial {
+  width: 318px;
+  flex-shrink: 0;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.testimonial blockquote {
+  font-size: 14.1px;
+  letter-spacing: -0.22px;
+  line-height: 1.56;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Testimonial author — avatar + name/role */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.author-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.author-role {
+  font-size: 12.5px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* FAQ */
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 48px;
+}
+
+.faq-title {
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.7px;
+  margin-bottom: 12px;
+}
+
+.faq-item {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 12px;
+  padding: 0 20px;
+}
+
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 14.6px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  text-align: left;
+  letter-spacing: -0.2px;
+}
+
+.faq-question:hover {
+  color: #000;
+}
+
+.faq-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 200px;
+}
+
+.faq-answer p {
+  padding-bottom: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+  letter-spacing: -0.23px;
+  color: #555;
+}
+
+/* Pricing footer */
+.pricing-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 16px;
+}
+
+.pricing-footer p {
+  font-size: 13.5px;
+  color: #999;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 38%;
+    min-width: 300px;
+  }
+
+  .sidebar-content {
+    padding: 48px 32px 32px 48px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar-content {
+    position: relative;
+    height: auto;
+    overflow: visible;
+    padding: 40px 24px 32px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .portfolio {
+    padding: 0 12px 24px;
+  }
+
+  .portfolio-grid {
+    gap: 12px;
+  }
+
+  .portfolio-card {
+    border-radius: 12px;
+  }
+
+  .pricing-page {
+    padding: 40px 20px 40px;
+  }
+}
+
+/* Testimonials stack below 500px */
+@media (max-width: 500px) {
+  .testimonials {
+    flex-direction: column;
+  }
+
+  .testimonial {
+    width: 100%;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .sidebar-content {
+    padding: 64px 24px 32px 24px;
+  }
+
+  .logo-text {
+    font-size: 19px;
+    letter-spacing: -0.9px;
+  }
+
+  .portfolio-grid {
+    gap: 7px;
+  }
+
+  .btn {
+    height: 36px;
+  }
+}
+
+/* Pricing — mobile adjustments */
+@media (max-width: 768px) {
+  .faq {
+    gap: 4px;
+  }
+
+  .price {
+    font-size: 25px;
+    margin-top: 40px;
+  }
+
+  .price-period {
+    font-size: 16px;
+  }
+  .testimonials {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+    width: 100%;
+  }
+
+  .testimonial {
+    width: 100%;
+  }
+  .pricing-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+  }
+
+
+}
