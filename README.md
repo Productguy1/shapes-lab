@@ -13,7 +13,7 @@ Website for [shapeslab.design](https://shapeslab.design) — an independent prod
 - CSS
 - Vanilla JavaScript
 
-No frameworks. No dependencies. No build step.
+No frameworks. No dependencies.
 
 ## Project Structure
 
